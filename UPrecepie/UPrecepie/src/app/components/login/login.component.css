@@ -1,0 +1,45 @@
+.container {
+    max-width: 700px; /* Zwiększenie maksymalnej szerokości */
+  }
+  
+  .card {
+    border: none;
+    border-radius: 15px;
+    background-color: #f9f9f9; /* Jasne tło karty */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Dodanie przestrzeni wewnętrznej */
+  }
+  
+  .text-secondary {
+    color: #6c757d; /* Szary kolor dla nagłówka */
+  }
+  
+  .form-control {
+    border-radius: 10px;
+  }
+  
+  .btn-primary {
+    background-color: #bae1ff; /* Pastelowy niebieski */
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #80d1ff; /* Intensywny pastelowy niebieski */
+    transform: scale(1.05);
+  }
+  
+  .invalid-feedback {
+    font-size: 0.85rem;
+    color: #ff4d4d; /* Czerwony dla błędów */
+  }
+  
+  .alert-danger {
+    background-color: #ffb3ba; /* Delikatny róż */
+    border: none;
+    color: #721c24;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+  

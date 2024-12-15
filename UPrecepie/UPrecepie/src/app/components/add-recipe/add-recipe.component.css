@@ -1,0 +1,44 @@
+.container {
+  max-width: 700px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+h2 {
+  color: #ff8080; 
+  font-weight: bold;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #5a5a5a;
+}
+
+.btn-primary {
+  background-color: #bae1ff; 
+  border: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #80d1ff;
+  }
+}
+
+.btn-secondary {
+  background-color: #ffb3ba; 
+  border: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ff8080; 
+  }
+}
+
+.text-danger {
+  font-size: 0.875rem;
+  font-weight: 600;
+}

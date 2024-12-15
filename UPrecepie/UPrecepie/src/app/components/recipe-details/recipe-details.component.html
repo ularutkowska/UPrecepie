@@ -1,0 +1,83 @@
+@if (recipe) {
+  <div class="container">
+    <h1 class="text-center">{{ recipe.title }}</h1>
+    <p><strong>Description:</strong> {{ recipe.description }}</p>
+
+    <div class="d-flex justify-content-center my-3">
+      @if (isLoggedIn) {
+        <button class="btn btn-primary" (click)="toggleFavourite(recipe.id)">
+          {{ isFavourite(recipe.id) ? 'Remove from Favourites' : 'Add to Favourites' }}
+        </button>
+      }
+    </div>
+
+    <p><strong>Category:</strong> {{ recipe?.categoryName }}</p>
+    <p><strong>Preparation Time:</strong> {{ recipe.preparation_time }} minutes</p>
+
+    <h3>Ingredients:</h3>
+    <ul>
+      @for (ingredient of recipe.ingredients; track ingredient) {
+        <li>{{ ingredient }}</li>
+      }
+    </ul>
+
+    <h3>Instructions:</h3>
+    <ol>
+      @for (step of recipe.instructions; track step) {
+        <li>{{ step }}</li>
+      }
+    </ol>
+
+    <h3>Average Rating: {{ recipe?.rating | number: '1.1-2' }}</h3>
+
+    @if (isLoggedIn) {
+      <app-ratings
+        [userRating]="userRating"
+        (ratingChange)="rateRecipe($event)"
+      ></app-ratings>
+    }
+
+    <app-comment-list
+      [comments]="comments"
+      [isLoggedIn]="isLoggedIn"
+      (commentEdited)="editComment($event)"
+      (commentDeleted)="deleteComment($event)"
+    ></app-comment-list>
+    
+    @if (isLoggedIn) {
+      <div class="my-4">
+        <h4>Add a Comment:</h4>
+        <textarea
+          [value]="commentContent"
+          (input)="onCommentInput($event)"
+          placeholder="Write your comment..."
+          class="form-control mb-2"
+          rows="3"
+        ></textarea>
+        <button
+          class="btn btn-primary"
+          (click)="addComment()"
+          [disabled]="!commentContent.trim()"
+        >
+          Post Comment
+        </button>
+      </div>
+    }
+    
+
+    @if (isOwner()) {
+      <button class="btn btn-secondary" [routerLink]="['/recipes/edit', recipe?.id]">
+        Edit
+      </button>
+      <button class="btn btn-secondary" (click)="deleteRecipe()">
+        Delete
+      </button>
+    }
+  </div>
+} @else {
+  <div class="container text-center">
+    <h2 class="text-danger">Recipe not found!</h2>
+    <p>Sorry, we couldn't find the recipe you're looking for.</p>
+    <a routerLink="/recipes" class="btn btn-primary">Back to Recipes</a>
+  </div>
+}

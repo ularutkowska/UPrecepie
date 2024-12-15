@@ -1,0 +1,16 @@
+<div class="comment-list">
+  @for (comment of comments; track comment.id) {
+    <div class="comment-card p-3 mb-3 shadow-sm bg-light rounded">
+      <p class="comment-content mb-1">{{ comment.content }}</p>
+      <small class="text-muted">
+        Posted by User {{ comment.userId }} on {{ comment.date | date: 'short' }}
+      </small>
+      @if (isOwner(comment)) {
+        <div class="mt-2 d-flex gap-2">
+          <button class="btn btn-primary btn-sm" (click)="editComment(comment)">Edit</button>
+          <button class="btn btn-danger btn-sm" (click)="deleteComment(comment.id)">Delete</button>
+        </div>
+      }
+    </div>
+  }
+</div>

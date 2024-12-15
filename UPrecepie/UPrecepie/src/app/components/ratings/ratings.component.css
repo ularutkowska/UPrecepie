@@ -1,0 +1,33 @@
+.ratings {
+    display: flex;
+    justify-content: center;
+    gap: 8px; /* Odstęp między gwiazdkami */
+    margin-bottom: 1rem;
+  
+    button {
+      background-color: #fdf7e3; /* Jasny pastelowy kolor */
+      border: 1px solid #ddd; /* Delikatna ramka */
+      border-radius: 5px; /* Zaokrąglone krawędzie */
+      padding: 0.5rem;
+      font-size: 1.5rem; /* Większy rozmiar czcionki dla gwiazdek */
+      color: #ffb3ba; /* Pastelowy różowy kolor */
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.2s;
+  
+      &.selected {
+        background-color: #ffb3ba; /* Wypełniony różowy */
+        color: #fff; /* Biały tekst na zaznaczonej gwiazdce */
+      }
+  
+      &:hover {
+        transform: scale(1.2); /* Powiększenie przy najechaniu */
+        background-color: #ff8080; /* Intensywniejszy różowy */
+      }
+    }
+  }
+  
+  p {
+    text-align: center;
+    font-size: 1rem;
+    color: #6c757d; /* Neutralny szary */
+  }

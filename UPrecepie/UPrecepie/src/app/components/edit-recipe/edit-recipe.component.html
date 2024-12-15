@@ -1,0 +1,101 @@
+<div class="container mt-5">
+  <h1 class="text-center text-primary">Edit Recipe</h1>
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()" class="p-4 bg-light rounded shadow-sm">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title:</label>
+      <input
+        id="title"
+        formControlName="title"
+        type="text"
+        class="form-control"
+        [class.is-invalid]="recipeForm.get('title')?.invalid && recipeForm.get('title')?.touched"
+      />
+      @if (recipeForm.get('title')?.invalid && recipeForm.get('title')?.touched) {
+        <div class="text-danger">
+          Title is required.
+        </div>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description:</label>
+      <textarea
+        id="description"
+        formControlName="description"
+        class="form-control"
+        [class.is-invalid]="recipeForm.get('description')?.invalid && recipeForm.get('description')?.touched"
+      ></textarea>
+      @if (recipeForm.get('description')?.invalid && recipeForm.get('description')?.touched) {
+        <div class="text-danger">
+          Description is required.
+        </div>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="ingredients" class="form-label">Ingredients (comma separated):</label>
+      <input
+        id="ingredients"
+        formControlName="ingredients"
+        type="text"
+        class="form-control"
+        [class.is-invalid]="recipeForm.get('ingredients')?.invalid && recipeForm.get('ingredients')?.touched"
+      />
+      @if (recipeForm.get('ingredients')?.invalid && recipeForm.get('ingredients')?.touched) {
+        <div class="text-danger">
+          Ingredients are required.
+        </div>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="instructions" class="form-label">Instructions (comma separated):</label>
+      <textarea
+        id="instructions"
+        formControlName="instructions"
+        class="form-control"
+        [class.is-invalid]="recipeForm.get('instructions')?.invalid && recipeForm.get('instructions')?.touched"
+      ></textarea>
+      @if (recipeForm.get('instructions')?.invalid && recipeForm.get('instructions')?.touched) {
+        <div class="text-danger">
+          Instructions are required.
+        </div>
+      }
+    </div>
+
+    <div class="mb-3">
+      <label for="preparation_time" class="form-label">Preparation Time (minutes):</label>
+      <input
+        id="preparation_time"
+        formControlName="preparation_time"
+        type="number"
+        class="form-control"
+        [class.is-invalid]="
+          recipeForm.get('preparation_time')?.invalid && recipeForm.get('preparation_time')?.touched
+        "
+      />
+      @if (recipeForm.get('preparation_time')?.hasError('required') && recipeForm.get('preparation_time')?.touched) {
+        <div class="text-danger small">Preparation time is required.</div>
+      }
+      @if (recipeForm.get('preparation_time')?.hasError('unrealisticTime') && recipeForm.get('preparation_time')?.touched) {
+        <div class="text-danger small">Preparation time must be between 1 and 1000 minutes.</div>
+      }
+    </div>    
+
+    <div class="mb-3">
+      <label for="category" class="form-label">Category:</label>
+      <select id="category" formControlName="categoryName" class="form-select">
+        @for (category of categories; track category.name) {
+          <option [value]="category.name">
+            {{ category.name }}
+          </option>
+        }
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button type="submit" class="btn btn-primary" [disabled]="recipeForm.invalid">Update Recipe</button>
+      <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+    </div>
+  </form>
+</div>

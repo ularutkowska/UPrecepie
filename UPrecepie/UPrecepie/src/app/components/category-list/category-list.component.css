@@ -1,0 +1,26 @@
+.category-list {
+    margin-top: 1rem;
+  
+    .category-btn {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #bae1ff; /* Pastel blue */
+      border: none;
+      border-radius: 20px;
+      color: #333;
+      transition: all 0.3s ease;
+  
+      &:hover {
+        background-color: #80d1ff; /* Slightly darker blue */
+        color: #fff;
+        transform: scale(1.05);
+      }
+  
+      &.selected {
+        background-color: #ffb3ba; /* Pastel pink */
+        color: #fff;
+        font-weight: bold;
+      }
+    }
+  }
+  

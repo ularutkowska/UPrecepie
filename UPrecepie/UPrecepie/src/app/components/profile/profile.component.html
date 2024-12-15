@@ -1,0 +1,71 @@
+<div class="profile container mt-4">
+  <h1 class="text-center text-primary">My Profile</h1>
+
+  @if (user) {
+    <form [formGroup]="profileForm" (ngSubmit)="updateProfile()" class="card p-4 mb-4">
+      <h2 class="card-title text-secondary">Profile Information</h2>
+      <div class="form-group mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input id="name" formControlName="name" [disabled]="!editMode" class="form-control" />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="surname" class="form-label">Surname:</label>
+        <input id="surname" formControlName="surname" [disabled]="!editMode" class="form-control" />
+      </div>
+
+      <div class="form-group mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input id="email" formControlName="email" class="form-control" />
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button type="button" (click)="toggleEditMode()" class="btn btn-secondary">
+          {{ editMode ? 'Cancel' : 'Edit Profile' }}
+        </button>
+        <button type="submit" class="btn btn-primary" [disabled]="!editMode">Save Changes</button>
+      </div>
+    </form>
+  }
+
+  <h2 class="text-center text-secondary">Change Password</h2>
+
+  <form [formGroup]="passwordForm" (ngSubmit)="changePassword()" class="card p-4 mb-4">
+    <div class="form-group mb-3">
+      <label for="currentPassword" class="form-label">Current Password:</label>
+      <input id="currentPassword" formControlName="currentPassword" type="password" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+      <label for="newPassword" class="form-label">New Password:</label>
+      <input id="newPassword" formControlName="newPassword" type="password" class="form-control" />
+    </div>
+    <div class="form-group mb-3">
+      <label for="confirmPassword" class="form-label">Confirm Password:</label>
+      <input id="confirmPassword" formControlName="confirmPassword" type="password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary w-100" [disabled]="passwordForm.invalid">
+      Change Password
+    </button>
+  </form>
+
+  <h2 class="text-center text-secondary mt-4">My Recipes</h2>
+
+  @if (userRecipes.length > 0) {
+    <div class="row mt-4">
+      @for (recipe of userRecipes; track recipe.id) {
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">{{ recipe.title }}</h5>
+              <p class="card-text">{{ recipe.description }}</p>
+              <p><strong>Category:</strong> {{ recipe.categoryName }}</p>
+              <a [routerLink]="['/recipes', recipe.id]" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <p class="text-center text-muted">You have not created any recipes yet.</p>
+  }
+</div>

@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand custom-brand" [routerLink]="'/recipes'">UPrecepie</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        @if (!isLoggedIn) {
+          <li class="nav-item">
+            <a class="nav-link custom-link" [routerLink]="'/login'">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" [routerLink]="'/register'">Register</a>
+          </li>
+        }
+        <li class="nav-item">
+          <a class="nav-link custom-link" [routerLink]="'/recipes'">Recipes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link custom-link" [routerLink]="'/search'">Search Recipes</a>
+        </li>
+        @if (isLoggedIn) {
+          <li class="nav-item">
+            <a class="nav-link custom-link" [routerLink]="'/add-recipe'">Add Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" [routerLink]="'/favourites'">Favourites</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link custom-link" [routerLink]="'/profile'">Profile</a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-danger btn-sm" (click)="logout()">Logout</button>
+          </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>

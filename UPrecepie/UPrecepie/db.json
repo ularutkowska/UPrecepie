@@ -1,0 +1,698 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "Italian",
+      "recipes": []
+    },
+    {
+      "id": "2",
+      "name": "Indian",
+      "recipes": []
+    },
+    {
+      "id": "3",
+      "name": "Desserts",
+      "recipes": []
+    },
+    {
+      "id": "4",
+      "name": "Breakfast",
+      "recipes": []
+    },
+    {
+      "id": "5",
+      "name": "Salad",
+      "recipes": [
+        3
+      ]
+    },
+    {
+      "id": "6",
+      "name": "American",
+      "recipes": []
+    },
+    {
+      "id": "7",
+      "name": "Soup",
+      "recipes": []
+    },
+    {
+      "id": "8",
+      "name": "Lunch",
+      "recipes": []
+    },
+    {
+      "id": "9",
+      "name": "Snack",
+      "recipes": []
+    },
+    {
+      "id": "10",
+      "name": "Drinks",
+      "recipes": []
+    },
+    {
+      "id": "11",
+      "name": "Sides",
+      "recipes": []
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "recipeId": 1,
+      "userId": 2,
+      "content": "Great recipe! My family loved it.",
+      "date": "2024-11-26T12:00:00Z"
+    },
+    {
+      "id": "2",
+      "recipeId": 2,
+      "userId": 1,
+      "content": "Too spicy for my taste.",
+      "date": "2024-11-25T10:30:00Z"
+    },
+    {
+      "id": "3",
+      "recipeId": 1,
+      "userId": 0,
+      "content": "Super!",
+      "date": "2024-11-27T20:15:19.665Z"
+    },
+    {
+      "id": "4",
+      "recipeId": "5678",
+      "userId": "1",
+      "content": "Niestety średnie w smaku",
+      "date": "2024-12-11T15:43:39.576Z"
+    },
+    {
+      "id": "5",
+      "recipeId": "9101",
+      "userId": "1",
+      "content": "Super",
+      "date": "2024-12-11T15:44:02.902Z"
+    },
+    {
+      "id": "6",
+      "recipeId": "56789",
+      "userId": "1",
+      "content": "Tak zdrowo to nie dla mnie ;)",
+      "date": "2024-12-11T15:45:16.575Z"
+    },
+    {
+      "id": "7",
+      "recipeId": "33344",
+      "userId": "1",
+      "content": "Zdrowe i smaczne :)",
+      "date": "2024-12-11T15:45:45.126Z"
+    },
+    {
+      "id": "8",
+      "recipeId": "55566",
+      "userId": "1",
+      "content": "Mnaim!",
+      "date": "2024-12-11T15:48:56.303Z"
+    },
+    {
+      "id": "9",
+      "recipeId": "5678",
+      "userId": "2",
+      "content": "Smaczne!",
+      "date": "2024-12-11T15:58:15.158Z"
+    },
+    {
+      "id": "10",
+      "recipeId": "56789",
+      "userId": "2",
+      "content": "Fuja..",
+      "date": "2024-12-11T15:58:41.829Z"
+    },
+    {
+      "id": "11",
+      "recipeId": "11122",
+      "userId": "2",
+      "content": "Przepyszne!",
+      "date": "2024-12-11T15:58:58.293Z"
+    },
+    {
+      "id": "12",
+      "recipeId": "12345",
+      "userId": "2",
+      "content": "Super śniadanie! Energia do końca dnia",
+      "date": "2024-12-11T16:02:01.007Z"
+    },
+    {
+      "id": "13",
+      "recipeId": "67890",
+      "userId": "2",
+      "content": "Nie dla mnie",
+      "date": "2024-12-11T16:02:22.241Z"
+    },
+    {
+      "id": "14",
+      "recipeId": "90df",
+      "userId": "2",
+      "content": "Fajny przepis ;p",
+      "date": "2024-12-11T16:04:42.847Z"
+    }
+  ],
+  "recipes": [
+    {
+      "id": "1234",
+      "title": "Kanapka z Awokado",
+      "description": "Prosta i zdrowa kanapka z awokado, idealna na śniadanie.",
+      "ingredients": [
+        "Awokado",
+        "Pieczywo pełnoziarniste",
+        "Sól",
+        "Pieprz",
+        "Sok z cytryny"
+      ],
+      "instructions": [
+        "Awokado obierz i rozgnieć widelcem.",
+        "Dodaj sól, pieprz i sok z cytryny do smaku.",
+        "Nałóż pastę z awokado na pieczywo pełnoziarniste."
+      ],
+      "preparation_time": 5,
+      "categoryName": "Breakfast",
+      "rating": 4,
+      "ratings": [
+        {
+          "userId": "1",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": "5678",
+      "title": "Makaron z Pesto",
+      "description": "Szybki i smaczny makaron z domowym pesto.",
+      "ingredients": [
+        "Makaron",
+        "Bazylia",
+        "Czosnek",
+        "Oliwa z oliwek",
+        "Orzechy piniowe",
+        "Parmezan"
+      ],
+      "instructions": [
+        "Ugotuj makaron zgodnie z instrukcją na opakowaniu.",
+        "Zmiksuj bazylię, czosnek, orzechy piniowe i oliwę na gładką pastę.",
+        "Wymieszaj pesto z gorącym makaronem i posyp parmezanem."
+      ],
+      "preparation_time": 15,
+      "categoryName": "Italian",
+      "rating": 4,
+      "ratings": [
+        {
+          "userId": "1",
+          "rating": 3
+        },
+        {
+          "userId": "2",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "9101",
+      "title": "Owsianka z Owocami",
+      "description": "Pożywne śniadanie z płatkami owsianymi i świeżymi owocami.",
+      "ingredients": [
+        "Płatki owsiane",
+        "Mleko",
+        "Banany",
+        "Jagody",
+        "Miód"
+      ],
+      "instructions": [
+        "Ugotuj płatki owsiane na mleku do miękkości.",
+        "Pokrój banany i wymieszaj z jagodami.",
+        "Dodaj owoce do owsianki i polej miodem."
+      ],
+      "preparation_time": 10,
+      "categoryName": "Breakfast",
+      "rating": 5,
+      "ratings": [
+        {
+          "userId": "1",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "1121",
+      "title": "Zupa Pomidorowa",
+      "description": "Tradycyjna zupa pomidorowa z ryżem.",
+      "ingredients": [
+        "Pomidory",
+        "Bulion",
+        "Cebula",
+        "Ryż",
+        "Śmietana"
+      ],
+      "instructions": [
+        "Pokrój cebulę i zeszklij na maśle.",
+        "Dodaj pomidory i bulion, gotuj przez 15 minut.",
+        "Zblenduj zupę na gładką konsystencję.",
+        "Dodaj ugotowany ryż i podawaj ze śmietaną."
+      ],
+      "preparation_time": 20,
+      "categoryName": "Soups",
+      "rating": 5,
+      "ratings": [
+        {
+          "userId": "1",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "3141",
+      "title": "Placki Ziemniaczane",
+      "description": "Tradycyjne placki ziemniaczane na złoty kolor.",
+      "ingredients": [
+        "Ziemniaki",
+        "Cebula",
+        "Jajko",
+        "Mąka",
+        "Olej",
+        "Sól"
+      ],
+      "instructions": [
+        "Zetrzyj ziemniaki i cebulę na tarce.",
+        "Wymieszaj z jajkiem, mąką i solą.",
+        "Smaż placki na rozgrzanym oleju, aż będą złociste."
+      ],
+      "preparation_time": 25,
+      "categoryName": "Polish",
+      "rating": 0,
+      "ratings": []
+    },
+    {
+      "id": "12345",
+      "title": "Jajecznica z Szynką",
+      "description": "Klasyczna jajecznica z dodatkiem szynki.",
+      "ingredients": [
+        "Jajka",
+        "Szynka",
+        "Masło",
+        "Sól",
+        "Pieprz"
+      ],
+      "instructions": [
+        "Pokrój szynkę w kostkę.",
+        "Rozgrzej masło na patelni i podsmaż szynkę.",
+        "Dodaj roztrzepane jajka i smaż, aż jajecznica osiągnie pożądaną konsystencję.",
+        "Dopraw solą i pieprzem."
+      ],
+      "preparation_time": 10,
+      "categoryName": "Breakfast",
+      "rating": 5,
+      "ratings": [
+        {
+          "userId": "2",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "67890",
+      "title": "Koktajl Owocowy",
+      "description": "Orzeźwiający koktajl z mieszanych owoców.",
+      "ingredients": [
+        "Banan",
+        "Truskawki",
+        "Mleko",
+        "Jogurt naturalny",
+        "Miód"
+      ],
+      "instructions": [
+        "Pokrój banana i truskawki na kawałki.",
+        "Zmiksuj wszystkie składniki na gładką masę.",
+        "Podawaj w wysokiej szklance."
+      ],
+      "preparation_time": 5,
+      "categoryName": "Drinks",
+      "rating": 1,
+      "ratings": [
+        {
+          "userId": "2",
+          "rating": 1
+        }
+      ]
+    },
+    {
+      "id": "54321",
+      "title": "Kanapka Caprese",
+      "description": "Prosta kanapka inspirowana włoskim przysmakiem caprese.",
+      "ingredients": [
+        "Chleb",
+        "Mozzarella",
+        "Pomidor",
+        "Bazylia",
+        "Oliwa z oliwek"
+      ],
+      "instructions": [
+        "Pokrój mozzarellę i pomidora na plastry.",
+        "Nałóż na kromkę chleba, dodaj liście bazylii.",
+        "Skrop oliwą z oliwek i przykryj drugą kromką."
+      ],
+      "preparation_time": 5,
+      "categoryName": "Lunch",
+      "rating": 4.5,
+      "ratings": [
+        {
+          "userId": "2",
+          "rating": 4
+        },
+        {
+          "userId": "1",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "56789",
+      "title": "Sałatka Grecka",
+      "description": "Tradycyjna sałatka grecka z warzywami i serem feta.",
+      "ingredients": [
+        "Pomidor",
+        "Ogórek",
+        "Czerwona cebula",
+        "Ser feta",
+        "Oliwa z oliwek",
+        "Oliwki"
+      ],
+      "instructions": [
+        "Pokrój pomidora, ogórka i cebulę w kostkę.",
+        "Dodaj pokruszony ser feta i oliwki.",
+        "Skrop oliwą z oliwek i wymieszaj."
+      ],
+      "preparation_time": 10,
+      "categoryName": "Salad",
+      "rating": 2,
+      "ratings": [
+        {
+          "userId": "1",
+          "rating": 3
+        },
+        {
+          "userId": "2",
+          "rating": 1
+        }
+      ]
+    },
+    {
+      "id": "11122",
+      "title": "Makaron Carbonara",
+      "description": "Szybki i prosty makaron carbonara.",
+      "ingredients": [
+        "Makaron",
+        "Jajka",
+        "Parmezan",
+        "Bekon",
+        "Czosnek"
+      ],
+      "instructions": [
+        "Ugotuj makaron al dente.",
+        "Podsmaż bekon i czosnek na patelni.",
+        "W misce wymieszaj jajka z parmezanem.",
+        "Dodaj gorący makaron do patelni i wlej mieszankę jajeczną, mieszając energicznie."
+      ],
+      "preparation_time": 15,
+      "categoryName": "Italian",
+      "rating": 5,
+      "ratings": [
+        {
+          "userId": "2",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "33344",
+      "title": "Placki Banowe",
+      "description": "Zdrowe placki z bananów i jajek.",
+      "ingredients": [
+        "Banany",
+        "Jajka",
+        "Cynamon",
+        "Olej kokosowy"
+      ],
+      "instructions": [
+        "Rozgnieć banany i wymieszaj z jajkami oraz szczyptą cynamonu.",
+        "Rozgrzej olej kokosowy na patelni.",
+        "Smaż małe placki na złoty kolor."
+      ],
+      "preparation_time": 10,
+      "categoryName": "Desserts",
+      "rating": 5,
+      "ratings": [
+        {
+          "userId": "1",
+          "rating": 5
+        }
+      ]
+    },
+    {
+      "id": "55566",
+      "title": "Pieczone Ziemniaki",
+      "description": "Aromatyczne pieczone ziemniaki z przyprawami.",
+      "ingredients": [
+        "Ziemniaki",
+        "Oliwa z oliwek",
+        "Rozmaryn",
+        "Sól",
+        "Pieprz"
+      ],
+      "instructions": [
+        "Obierz i pokrój ziemniaki w kostkę.",
+        "Wymieszaj z oliwą z oliwek, rozmarynem, solą i pieprzem.",
+        "Piecz w piekarniku rozgrzanym do 200°C przez 25 minut."
+      ],
+      "preparation_time": 30,
+      "categoryName": "Sides",
+      "rating": 4,
+      "ratings": [
+        {
+          "userId": "1",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "id": "51dd",
+      "title": "Sernik na Zimno",
+      "description": "Lekki sernik na zimno z owocami.",
+      "ingredients": [
+        "Twaróg",
+        "Śmietana kremówka",
+        "Cukier",
+        "Galaretka",
+        "Owoce"
+      ],
+      "instructions": [
+        "Wymieszaj twaróg",
+        "śmietanę i cukier na gładką masę",
+        "Rozpuść galaretkę i dodaj do masy twarogowej",
+        "Przelej do formy i wstaw do lodówki na kilka godzin",
+        "Przed podaniem udekoruj owocami"
+      ],
+      "preparation_time": 15,
+      "categoryName": "Desserts",
+      "rating": 0,
+      "ratings": [],
+      "comments": []
+    },
+    {
+      "id": "90df",
+      "title": "Kurczak w Sosie Miodowo-Musztardowym",
+      "description": "Delikatne kawałki kurczaka w aromatycznym sosie.",
+      "ingredients": [
+        "Filet z kurczaka",
+        "Musztarda",
+        "Miód",
+        "Śmietana",
+        "Olej",
+        "Sól",
+        "Pieprz"
+      ],
+      "instructions": [
+        "Pokrój kurczaka na kawałki i podsmaż na oleju",
+        "Wymieszaj musztardę",
+        "miód i śmietanę",
+        "a następnie dodaj do kurczaka",
+        "Duś przez 10 minut na małym ogniu",
+        "Podawaj z ryżem lub ziemniakami"
+      ],
+      "preparation_time": 25,
+      "categoryName": "American",
+      "rating": 4,
+      "ratings": [
+        {
+          "userId": "2",
+          "rating": 4
+        }
+      ],
+      "comments": []
+    },
+    {
+      "id": "5809",
+      "title": "Placuszki Cukiniowe",
+      "description": "Chrupiące placuszki z cukinii.",
+      "ingredients": [
+        "Cukinia",
+        "Jajka",
+        "Mąka",
+        "Sól",
+        "Pieprz",
+        "Olej do smażenia"
+      ],
+      "instructions": [
+        "Zetrzyj cukinię na tarce i odciśnij nadmiar wody",
+        "Wymieszaj cukinię z jajkami i mąką",
+        "dopraw solą i pieprzem",
+        "Formuj placuszki i smaż na rozgrzanym oleju z obu stron na złoty kolor"
+      ],
+      "preparation_time": 20,
+      "categoryName": "Sides",
+      "rating": 0,
+      "ratings": [],
+      "comments": []
+    },
+    {
+      "id": "f4e7",
+      "title": "Ryż z Warzywami",
+      "description": "Lekki i zdrowy ryż z mieszanką warzyw.",
+      "ingredients": [
+        "Ryż",
+        "Wybrane warzywa",
+        "Sos"
+      ],
+      "instructions": [
+        "Ugotuj ryż według instrukcji na opakowaniu",
+        "Pokrój warzywa w kostkę i podsmaż na patelni",
+        "Dodaj ugotowany ryż i wymieszaj",
+        "Polej sosem i podawaj"
+      ],
+      "preparation_time": 15,
+      "categoryName": "Lunch",
+      "rating": 0,
+      "ratings": [],
+      "comments": []
+    },
+    {
+      "id": "d71d",
+      "title": "chleb",
+      "description": "pyszny chlebek",
+      "ingredients": [
+        "Mąka",
+        "Woda"
+      ],
+      "instructions": [
+        "Potłucz",
+        "zmieszaj"
+      ],
+      "preparation_time": 10,
+      "categoryName": "Salad",
+      "rating": 0,
+      "ratings": [],
+      "comments": []
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "admin123@gmail.com",
+      "password": "admin12",
+      "name": "Ada",
+      "surname": "Adamski",
+      "submitted_recipes": [
+        "36c2",
+        "8cce",
+        "0fd5",
+        "c676",
+        "e31b",
+        "51dd",
+        "90df",
+        "d71d"
+      ],
+      "favourite_list": [
+        "2",
+        "1",
+        "11",
+        "12",
+        "3",
+        "9101",
+        "5678"
+      ]
+    },
+    {
+      "id": "2",
+      "email": "ulaipati@gmail.com",
+      "password": "admin12",
+      "name": "Ula",
+      "surname": "Patryk",
+      "submitted_recipes": [
+        "5809",
+        "f4e7"
+      ],
+      "favourite_list": [
+        "2",
+        "33344",
+        "5678",
+        "11122"
+      ]
+    },
+    {
+      "id": "",
+      "email": "ania@gmail.com",
+      "password": "admin123",
+      "name": "Ania",
+      "surname": "Kowalska",
+      "submitted_recipes": [],
+      "favourite_list": []
+    },
+    {
+      "id": "",
+      "email": "marysia@gmail.com",
+      "password": "admin123",
+      "name": "Maria",
+      "surname": "Mostowiak",
+      "submitted_recipes": [],
+      "favourite_list": []
+    },
+    {
+      "id": "9e09",
+      "email": "pawel@gmail.com",
+      "password": "admkin123",
+      "name": "Paweł",
+      "surname": "Pawlak",
+      "submitted_recipes": [],
+      "favourite_list": [
+        "1"
+      ]
+    },
+    {
+      "id": "17f3",
+      "email": "patryk@gmail.com",
+      "password": "admin123",
+      "name": "Patryk",
+      "surname": "Piszczatowski",
+      "submitted_recipes": [],
+      "favourite_list": []
+    },
+    {
+      "id": "496d",
+      "email": "ula123@gmail.com",
+      "password": "admin123",
+      "name": "Ula",
+      "surname": "Rutkowska",
+      "submitted_recipes": [],
+      "favourite_list": []
+    }
+  ]
+}

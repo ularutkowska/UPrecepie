@@ -1,0 +1,11 @@
+<div class="category-list d-flex flex-wrap gap-2 justify-content-center">
+  @for (category of categories; track category.name) {
+    <button
+      class="btn category-btn"
+      [class.selected]="category.name === selectedCategory"
+      (click)="selectCategory(category.name)"
+    >
+      {{ category.name }}
+    </button>
+  }
+</div>

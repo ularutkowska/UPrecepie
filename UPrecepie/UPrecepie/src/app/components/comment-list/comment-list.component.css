@@ -1,0 +1,42 @@
+.comment-list {
+    .comment-card {
+      background-color: #fdf7e3;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      transition: transform 0.2s ease-in-out;
+  
+      &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  
+    .comment-content {
+      font-size: 1rem;
+      color: #333;
+    }
+  
+    button {
+      padding: 5px 10px;
+      font-size: 0.875rem;
+  
+      &.btn-primary {
+        background-color: #ffb3ba;
+        border-color: #ffb3ba;
+  
+        &:hover {
+          background-color: #ff8080;
+        }
+      }
+  
+      &.btn-danger {
+        background-color: #f08080;
+        border-color: #f08080;
+  
+        &:hover {
+          background-color: #e63946;
+        }
+      }
+    }
+  }
+  

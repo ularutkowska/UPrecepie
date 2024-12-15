@@ -1,0 +1,99 @@
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+input.ng-valid.ng-touched,
+textarea.ng-valid.ng-touched,
+select.ng-valid.ng-touched {
+  border: 1px solid green;
+}
+
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f9f9;
+    padding: 20px;
+  }
+  
+  .register-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .register-title {
+    text-align: center;
+    font-size: 24px;
+    color: #4a4e69; 
+    margin-bottom: 20px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    color: #4a4e69;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    padding: 10px;
+    border: 1px solid #d8e3e7;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9fcfd;
+  }
+  
+  .form-control.is-invalid {
+    border-color: #ff6b6b;
+    background-color: #ffe6e6;
+  }
+  
+  .error-message {
+    color: #ff6b6b;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  .register-btn {
+    background-color: #6c5b7b;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #4a4e69;
+    }
+  
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+  
+  .error-text {
+    color: #ff6b6b;
+    text-align: center;
+    margin-top: 15px;
+  }
+  

@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>❤️Your Favourite Recipes❤️</h1>
+
+  @if (favouriteRecipes.length > 0) {
+    <div class="recipe-grid">
+      @for (recipe of favouriteRecipes; track recipe.id) {
+        <div class="recipe-card">
+          <h2 class="recipe-title">{{ recipe.title }}</h2>
+          <p class="recipe-description">{{ recipe.description }}</p>
+          <a class="recipe-link" [routerLink]="['/recipes', recipe.id]">View Details</a>
+        </div>
+      }
+    </div>
+  } @else {
+    <p class="no-recipes">You don't have any favourite recipes yet!</p>
+  }
+</div>

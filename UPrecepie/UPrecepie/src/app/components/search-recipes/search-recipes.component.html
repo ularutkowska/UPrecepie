@@ -1,0 +1,67 @@
+<div class="container mt-4">
+  <form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="p-4 border rounded shadow bg-light">
+    <h2 class="text-center mb-4">Search Recipes</h2>
+    <div class="row mb-3">
+      <div class="col-md-4">
+        <label for="keyword" class="form-label">Keyword:</label>
+        <input
+          id="keyword"
+          formControlName="keyword"
+          placeholder="Search by title..."
+          class="form-control"
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="maxTime" class="form-label">Max Preparation Time (minutes):</label>
+        <input
+          id="maxTime"
+          type="number"
+          formControlName="maxTime"
+          class="form-control"
+        />
+      </div>
+      <div class="col-md-4">
+        <label for="minRating" class="form-label">Minimum Rating:</label>
+        <input
+          id="minRating"
+          type="number"
+          formControlName="minRating"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary me-2">Search</button>
+      <button type="button" (click)="resetFilters()" class="btn btn-secondary">Reset</button>
+    </div>
+  </form>
+
+  @if ((recipes | filterByTitle:(searchForm.get('keyword')?.value || '') | filterByRating:(minRating || 0) | filterByPrepTime:(maxTime || Infinity)).length > 0) {
+    <div class="mt-4">
+      <h3 class="text-center">Search Results:</h3>
+      <div class="row">
+        @for (recipe of recipes | filterByTitle:(searchForm.get('keyword')?.value || '') | filterByRating:(minRating || 0) | filterByPrepTime:(maxTime || Infinity); track recipe.id) {
+          <div class="col-md-4">
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <h5 class="card-title">{{ recipe.title }}</h5>
+                <p class="card-text text-truncate">{{ recipe.description }}</p>
+                <p class="card-text">
+                  <strong>Time:</strong> {{ recipe.preparation_time }} minutes
+                </p>
+                <p class="card-text">
+                  <strong>Rating:</strong> {{ recipe.rating }}
+                </p>
+                <a [routerLink]="['/recipes', recipe.id]" class="btn btn-primary btn-sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  } @else {
+    <div class="text-center mt-4">
+      <p class="text-muted">No recipes found matching the criteria.</p>
+    </div>
+  }
+  

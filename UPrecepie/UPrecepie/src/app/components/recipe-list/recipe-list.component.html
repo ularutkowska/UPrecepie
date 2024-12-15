@@ -1,0 +1,45 @@
+<div class="container my-4">
+  <div class="mb-4">
+    <h3 class="text-center text-primary">Browse Recipes by Category</h3>
+    <div class="d-flex flex-wrap justify-content-center gap-2">
+      @for (category of categories; track categories) {
+        <button
+          class="btn btn-secondary"
+          [class.active]="category.name === selectedCategoryName"
+          (click)="onCategorySelected(category.name)"
+        >
+          {{ category.name }}
+        </button>
+      }
+    </div>
+  </div>
+
+  @if (filteredRecipes.length > 0) {
+    <div class="row">
+      @for (recipe of filteredRecipes; track filteredRecipes) {
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">{{ recipe.title }}</h5>
+              <p class="card-text">{{ recipe.description }}</p>
+              <ul class="list-unstyled">
+                <li><strong>Category:</strong> {{ recipe.categoryName }}</li>
+                <li><strong>Preparation Time:</strong> {{ recipe.preparation_time }} minutes</li>
+              </ul>
+              <a
+                [routerLink]="['/recipes', recipe.id]"
+                class="btn btn-primary mt-auto"
+              >
+                View Details
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  } @else {
+    <div class="text-center mt-5">
+      <h4 class="text-secondary">No recipes found for the selected category.</h4>
+    </div>
+  }
+</div>

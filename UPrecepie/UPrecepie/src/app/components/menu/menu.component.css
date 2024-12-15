@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #fdf7e3; /* Jasne tło */
+  border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff8080; /* Różowy dla "UPrecepie" */
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+  color: #ff4d4d; /* Intensywny róż na hover */
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #6c757d; /* Szary dla linków */
+  text-transform: uppercase;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.nav-link:hover {
+  color: #343a40; /* Ciemniejszy szary na hover */
+  transform: scale(1.05);
+}
+
+.custom-link {
+  text-decoration: none;
+}
+
+.btn-danger {
+  background-color: #ffb3ba; /* Różowy dla "Logout" */
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #ff8080; /* Intensywny róż na hover */
+  transform: scale(1.05);
+}

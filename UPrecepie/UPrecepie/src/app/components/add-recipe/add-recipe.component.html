@@ -1,0 +1,85 @@
+<div class="container my-5">
+  <div class="card p-4 shadow-lg">
+    <h2 class="text-center text-primary mb-4">Add a New Recipe</h2>
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title:</label>
+        <input id="title" formControlName="title" class="form-control" />
+        @if (recipeForm.get('title')?.invalid && recipeForm.get('title')?.touched) {
+          <div class="text-danger small">
+            Title is required and must be at least 3 characters.
+          </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea id="description" formControlName="description" class="form-control"></textarea>
+        @if (recipeForm.get('description')?.invalid && recipeForm.get('description')?.touched) {
+          <div class="text-danger small">
+            Description is required.
+          </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="ingredients" class="form-label">Ingredients (comma-separated):</label>
+        <input id="ingredients" formControlName="ingredients" class="form-control" />
+        @if (recipeForm.get('ingredients')?.invalid && recipeForm.get('ingredients')?.touched) {
+          <div class="text-danger small">
+            Ingredients are required.
+          </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="instructions" class="form-label">Instructions (comma-separated):</label>
+        <input id="instructions" formControlName="instructions" class="form-control" />
+        @if (recipeForm.get('instructions')?.invalid && recipeForm.get('instructions')?.touched) {
+          <div class="text-danger small">
+            Instructions are required.
+          </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="preparation_time" class="form-label">Preparation Time (minutes):</label>
+        <input
+          id="preparation_time"
+          type="number"
+          formControlName="preparation_time"
+          class="form-control"
+        />
+      
+        @if (recipeForm.get('preparation_time')?.hasError('required') && recipeForm.get('preparation_time')?.touched) {
+          <div class="text-danger small">Preparation time is required.</div>
+        }
+      
+        @if (recipeForm.get('preparation_time')?.hasError('unrealisticTime') && recipeForm.get('preparation_time')?.touched) {
+          <div class="text-danger small">Preparation time must be between 1 and 1000 minutes.</div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="category" class="form-label">Category:</label>
+        <select id="category" formControlName="categoryName" class="form-select">
+          @for (category of categories; track category.name) {
+            <option [value]="category.name">
+              {{ category.name }}
+            </option>
+          }
+        </select>
+        @if (recipeForm.get('categoryName')?.invalid && recipeForm.get('categoryName')?.touched) {
+          <div class="text-danger small">
+            Category is required.
+          </div>
+        }
+      </div>
+
+      <div class="d-flex justify-content-between">
+        <button type="submit" class="btn btn-primary" [disabled]="!recipeForm.valid">Add Recipe</button>
+        <button type="button" class="btn btn-secondary" (click)="recipeForm.reset()">Reset</button>
+      </div>
+    </form>
+  </div>
+</div>
